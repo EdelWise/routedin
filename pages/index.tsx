@@ -49,7 +49,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="flex flex-col items-center  min-h-screen  bg-black">
+    <div className="flex flex-col items-center  min-h-screen  bg-black overflow-y-scroll scroll-smooth h-screen">
       <Head>
         <title>RoutedIn</title>
         <link rel="icon" href="/favicon.ico" />
