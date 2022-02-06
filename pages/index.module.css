@@ -1,1 +1,8 @@
-
+.subheader {
+  composes: from global;
+}
+/* section#home {
+  //   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 61.38%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 90.38%),
+    url("/images/mainBackgroundImage.jpg") no-repeat center center/cover;
+  height: 110vh; */
