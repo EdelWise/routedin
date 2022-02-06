@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="h-24 w-11/12 bg-black  sticky top-0 flex items-center justify-between">
+    <div className="h-24 w-11/12 bg-black  sticky top-0 flex items-center justify-between z-10">
       <a className="flex items-center" href="/">
         <img alt="" />
         <Image src="/logo_routedin.png" width={72} height={72}></Image>

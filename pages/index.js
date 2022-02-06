@@ -193,7 +193,7 @@ export default function Home() {
 
           <form
             className="flex flex-col text-white mb-10 self-center"
-            action="/"
+            action="mailto:rihards.edels@gmail.com"
           >
             <div className="mb-6 flex flex-col">
               <label className="text-white pb-1" for="name">
@@ -214,7 +214,7 @@ export default function Home() {
               </label>
               <input
                 className="bg-black border border-solid border-white h-12"
-                type="text"
+                type="tel"
                 id="phone"
                 name="phone"
                 placeholder="your phone"
@@ -236,7 +236,7 @@ export default function Home() {
               <label className="text-white pb-1" for="comments">
                 Comments
               </label>
-              <input
+              <textarea
                 className="bg-black border border-solid border-white min-h-fit"
                 type="text"
                 id="comments"
@@ -246,7 +246,7 @@ export default function Home() {
             </div>
 
             <input
-              className="bg-green text-white text-3xl font-roboto"
+              className="bg-green text-white text-3xl p-1 font-roboto"
               type="submit"
             />
           </form>
