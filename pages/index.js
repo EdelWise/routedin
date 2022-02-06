@@ -5,6 +5,7 @@ import Main from "../components/Main/Main";
 import CustomerCard from "../components/CustomerCard/CustomerCard";
 import SectionDescription from "../components/SectionDescription/SectionDescription";
 import TeamCard from "../components/TeamCard/TeamCard";
+import Section from "../components/Section/section";
 
 export default function Home() {
   const customerCards = [
@@ -49,8 +50,13 @@ export default function Home() {
     },
   ];
   return (
-    <div className="flex flex-col items-center  min-h-screen  bg-black">
+    <div className="flex flex-col items-center  min-h-screen  bg-black ">
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
+
         <title>RoutedIn</title>
         <link rel="icon" href="/favicon.ico" />
 
@@ -61,14 +67,13 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Main>
-        <Navbar />
-      </Main>
-      <div className="w-full px-57.25">
-        <section
-          id="services"
-          className=" min-h-screen w-full mx-57.25 grid grid-cols-2 gap-x-40 pt-28 "
-        >
+
+      <Navbar />
+
+      <Main />
+
+      <div className="w-full lg:px-57.25 px-4">
+        <Section id={"services"}>
           {/* section paragraph/header */}
           <SectionDescription
             number={"01"}
@@ -82,8 +87,8 @@ export default function Home() {
 
           {/* cards */}
 
-          <div className="w-full    flex flex-col gap-10  ">
-            <div className=" w-full bg-grey p-12 grid grid-cols-[1fr,96px]  ">
+          <div className="w-full    flex flex-col lg:gap-10 gap-5  ">
+            <div className=" w-full bg-grey lg:p-12 p-10 grid lg:grid-cols-[1fr,96px] grid-cols-[1fr,mincontent]  ">
               <div>
                 <div className="text-2xl font-roboto text-white mb-4">
                   Title 2
@@ -121,8 +126,8 @@ export default function Home() {
 
           {/* technology stack */}
 
-          <div className="w-full col-span-2 mt-44    grid grid-cols-2 gap-x-40 justify-between">
-            <div className="col-span-2 relative left-20 mb-20">
+          <div className="w-full lg:col-span-2 lg:mt-44    grid lg:grid-cols-2 gap-x-40 justify-between">
+            <div className="lg:col-span-2 lg:relative left-20 mb-20">
               <h1 className="text-5xl font-podkova text-white	">
                 Technology stack
               </h1>
@@ -131,17 +136,14 @@ export default function Home() {
               </h2>
             </div>
 
-            <img className="relative left-20" src="/tech_stack.png" alt="" />
-            <h1 className="text-white text-16 text-right ">
+            <img className="lg:relative left-20" src="/tech_stack.png" alt="" />
+            <h1 className="text-white lg:text-16 text-[48px] text-right ">
               Core capabilities & Skills
             </h1>
           </div>
-        </section>
+        </Section>
 
-        <section
-          id="customers"
-          className=" min-h-screen w-full mx-57.25 grid grid-cols-2 gap-x-40 pt-28 "
-        >
+        <Section id={"customers"}>
           <SectionDescription
             number={"02"}
             title={"Our customers"}
@@ -150,7 +152,7 @@ export default function Home() {
             }
           />
           {/* customer card */}
-          <div className="flex flex-col justify- gap-20 ">
+          <div className="flex flex-col  lg:gap-20 gap-10 ">
             {customerCards.map((card) => (
               <CustomerCard
                 image={card.image}
@@ -159,11 +161,9 @@ export default function Home() {
               />
             ))}
           </div>
-        </section>
-        <section
-          id="team"
-          className=" min-h-screen w-full mx-57.25 grid grid-cols-2 gap-x-40 pt-28 "
-        >
+        </Section>
+
+        <Section id={"team"}>
           <SectionDescription
             number={"03"}
             title={"team"}
@@ -172,7 +172,7 @@ export default function Home() {
             }
           />
 
-          <div className="text-white grid grid-cols-2 justify-center gap-y-8">
+          <div className="text-white grid lg:grid-cols-2 justify-center gap-y-8">
             {teamMembers.map((member) => (
               <TeamCard
                 image={member.image}
@@ -181,12 +181,8 @@ export default function Home() {
               />
             ))}
           </div>
-        </section>
-
-        <section
-          id="contact"
-          className=" min-h-screen w-full mx-57.25 grid grid-cols-2 gap-x-40 pt-28 "
-        >
+        </Section>
+        <Section id={"contact"}>
           <SectionDescription
             number={"04"}
             title={"Contact us"}
@@ -195,7 +191,10 @@ export default function Home() {
             }
           />
 
-          <form className="flex flex-col" action="/">
+          <form
+            className="flex flex-col text-white mb-10 self-center"
+            action="/"
+          >
             <div className="mb-6 flex flex-col">
               <label className="text-white pb-1" for="name">
                 Name
@@ -251,7 +250,7 @@ export default function Home() {
               type="submit"
             />
           </form>
-        </section>
+        </Section>
       </div>
     </div>
   );

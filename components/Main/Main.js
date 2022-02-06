@@ -7,15 +7,15 @@ export default function Main({ children }) {
       {children}
       {/* title */}
 
-      <div className=" w-215 mt-32">
-        <div className="flex uppercase ml-1.5 font-roboto text-4.5 text-green">
+      <div className=" lg:w-215 w-full px-3  lg:mt-32 mt-12">
+        <div className="flex uppercase ml-1.5 font-roboto text-base lg:text-lg text-green">
           <span className="mr-8 flex">
             <img src="/green_line.svg" alt="" />{" "}
           </span>
           all in one freelancer tool
         </div>
 
-        <div className="text-white font-podkova text-8xl font-semibold">
+        <div className="text-white font-podkova text-5xl lg:text-8xl font-semibold">
           Bring your IT processes to today’s modern standards
         </div>
       </div>
