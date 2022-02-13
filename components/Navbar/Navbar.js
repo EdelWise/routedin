@@ -36,7 +36,7 @@ export default function Navbar() {
       </button>
     </div>
   ) : (
-    <div className="h-screen w-full bg-black  sticky top-0 flex flex-col items-center justify-center  z-10  px-5 lg:px-12">
+    <div className="h-screen w-full bg-black  sticky top-0 flex flex-col items-center  z-10  px-5 lg:px-12">
       <div className="w-full bg-black flex items-center justify-between self-start py-3">
         <a className="flex items-center" href="/">
           <Image src="/logo_routedin.png" width={72} height={72}></Image>
