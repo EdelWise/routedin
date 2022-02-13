@@ -6,6 +6,7 @@ import CustomerCard from "../components/CustomerCard/CustomerCard";
 import SectionDescription from "../components/SectionDescription/SectionDescription";
 import TeamCard from "../components/TeamCard/TeamCard";
 import Section from "../components/Section/section";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 export default function Home() {
   const customerCards = [
@@ -153,8 +154,9 @@ export default function Home() {
           />
           {/* customer card */}
           <div className="flex flex-col  lg:gap-20 gap-10 ">
-            {customerCards.map((card) => (
+            {customerCards.map((card, id) => (
               <CustomerCard
+                key={id}
                 image={card.image}
                 shortDescription={card.shortDescription}
                 description={card.description}
@@ -173,8 +175,9 @@ export default function Home() {
           />
 
           <div className="text-white grid lg:grid-cols-2 justify-center gap-y-8">
-            {teamMembers.map((member) => (
+            {teamMembers.map((member, id) => (
               <TeamCard
+                key={id}
                 image={member.image}
                 title={member.title}
                 name={member.name}
@@ -191,65 +194,7 @@ export default function Home() {
             }
           />
 
-          <form
-            className="flex flex-col text-white mb-10 self-center"
-            action="mailto:rihards.edels@gmail.com"
-          >
-            <div className="mb-6 flex flex-col">
-              <label className="text-white pb-1" for="name">
-                Name
-              </label>
-
-              <input
-                className="bg-black border border-solid border-white h-12"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="write your name"
-              />
-            </div>
-            <div className="mb-6 flex flex-col">
-              <label className="text-white pb-1" for="phone">
-                Phone
-              </label>
-              <input
-                className="bg-black border border-solid border-white h-12"
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="your phone"
-              />
-            </div>
-            <div className="mb-6 flex flex-col">
-              <label className="text-white pb-1" for="email">
-                Email
-              </label>
-              <input
-                className="bg-black border border-solid border-white h-12"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="your email"
-              />
-            </div>
-            <div className="mb-6 flex flex-col">
-              <label className="text-white pb-1" for="comments">
-                Comments
-              </label>
-              <textarea
-                className="bg-black border border-solid border-white min-h-fit"
-                type="text"
-                id="comments"
-                name="comments"
-                placeholder="Leave your comments"
-              />
-            </div>
-
-            <input
-              className="bg-green text-white text-3xl p-1 font-roboto"
-              type="submit"
-            />
-          </form>
+          <ContactForm />
         </Section>
       </div>
     </div>
