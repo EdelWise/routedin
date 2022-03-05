@@ -5,7 +5,7 @@ import Main from "../components/Main/Main";
 import CustomerCard from "../components/CustomerCard/CustomerCard";
 import SectionDescription from "../components/SectionDescription/SectionDescription";
 import TeamCard from "../components/TeamCard/TeamCard";
-import Section from "../components/Section/section";
+import Section from "../components/Section//Section";
 import ContactForm from "../components/ContactForm/ContactForm";
 
 export default function Home() {
@@ -73,7 +73,7 @@ export default function Home() {
 
       <Main />
 
-      <div className="w-full lg:px-57.25 px-4">
+      <div className="w-full lg:px-[10%] px-4">
         <Section id={"services"}>
           {/* section paragraph/header */}
           <SectionDescription
@@ -83,8 +83,6 @@ export default function Home() {
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie lacus aliquam aliquam nibh sed ac vestibulum nibh mi. In lorem risus natoque enim venenatis enim vestibulum. Urna interdum massa velit, penatibus amet, mattis arcu. Arcu orci, tellus, et vel, ornare in. Eget mauris, at malesuada vulputate odio id at integer. Imperdiet viverra nulla cras ipsum ullamcorper vitae. Duis dolor massa facilisis purus nulla nulla quis."
             }
           />
-
-          {/* <img src="/office.png" alt="" /> */}
 
           {/* cards */}
 
@@ -174,7 +172,9 @@ export default function Home() {
             }
           />
 
-          <div className="text-white grid lg:grid-cols-2 justify-center gap-y-8">
+          {/* team cards */}
+
+          <div className="text-white grid desktop:grid-cols-2 justify-center gap-y-8">
             {teamMembers.map((member, id) => (
               <TeamCard
                 key={id}

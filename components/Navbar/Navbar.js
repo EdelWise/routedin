@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+import classes from "../../styles/navbar.module.css";
+
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -19,9 +21,21 @@ export default function Navbar() {
       </a>
 
       <div className="text-white font-roboto text-2xl lg:flex gap-20 hidden">
-        <a href="#services">Services</a>
-        <a href="#customers">Our customers</a>
-        <a href="#team">About us</a>
+        <div className={classes.linkWrapper}>
+          <a className={classes.links} href="#services">
+            Services
+          </a>
+        </div>
+        <div className={classes.linkWrapper}>
+          <a className={classes.links} href="#customers">
+            Our customers
+          </a>
+        </div>
+        <div className={classes.linkWrapper}>
+          <a className={classes.links} href="#team">
+            About us
+          </a>
+        </div>
       </div>
 
       <a
@@ -36,7 +50,7 @@ export default function Navbar() {
       </button>
     </div>
   ) : (
-    <div className="h-screen w-full bg-black  sticky top-0 flex flex-col items-center  z-10  px-5 lg:px-12">
+    <div className="h-screen w-full bg-black bg-opacity-90  absolute top-0 flex flex-col items-center  z-10  px-5 lg:px-12">
       <div className="w-full bg-black flex items-center justify-between self-start py-3">
         <a className="flex items-center" href="/">
           <Image src="/logo_routedin.png" width={72} height={72}></Image>

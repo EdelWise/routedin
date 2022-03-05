@@ -30,14 +30,17 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={sendEmail} className="flex flex-col text-white mb-10 ">
+    <form
+      onSubmit={sendEmail}
+      className="flex flex-col text-white mb-10 justify-center desktop:px-14 "
+    >
       <div className="mb-6 flex flex-col">
         <label className="text-white pb-1" htmlFor="name">
           Name
         </label>
 
         <input
-          className="bg-black border border-solid border-white h-12"
+          className="bg-black border border-solid border-white h-12 px-5 focus:outline-green"
           type="text"
           id="name"
           name="name"
@@ -50,7 +53,7 @@ export default function ContactForm() {
           Phone
         </label>
         <input
-          className="bg-black border border-solid border-white h-12"
+          className="bg-black border border-solid border-white h-12 px-5 focus:outline-green"
           type="tel"
           id="phone"
           name="phone"
@@ -63,7 +66,7 @@ export default function ContactForm() {
           Email
         </label>
         <input
-          className="bg-black border border-solid border-white h-12"
+          className="bg-black border border-solid border-white h-12 px-5 focus:outline-green"
           type="email"
           required
           id="email"
@@ -77,7 +80,7 @@ export default function ContactForm() {
           Comments
         </label>
         <textarea
-          className="bg-black border border-solid border-white min-h-fit"
+          className="bg-black border border-solid border-white min-h-fit px-5 focus:outline-green"
           type="text"
           id="comments"
           name="comments"
@@ -87,6 +90,7 @@ export default function ContactForm() {
       </div>
 
       <Recaptcha
+        className="mb-4"
         sitekey="6LerjnYeAAAAAPgXJ0GX0K_3kLNWlv5vh1SGUwJ9"
         onChange={handleCaptcha}
         theme={"dark"}

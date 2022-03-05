@@ -15,17 +15,20 @@ export default function Main({ children }) {
           all in one freelancer tool
         </div>
 
-        <div className="text-white font-podkova text-5xl lg:text-8xl font-semibold">
+        <div className="text-white font-podkova text-5xl lg:text-8xl font-semibold text-center lg:text-left">
           Bring your IT processes to today’s modern standards
         </div>
       </div>
 
       {/* scroll down */}
 
-      <div className="text-white text-2xl flex items-center h-6 font-roboto mt-32">
-        <span className="mr-5">scroll down</span>
+      <a
+        href="#services"
+        className="text-white text-2xl flex items-center h-6 font-roboto mt-32 animate-bounce"
+      >
+        <span className="mr-5 ">scroll down</span>
         <img src="/arrow_downward_24px.png" alt="" />{" "}
-      </div>
+      </a>
     </div>
   );
 }

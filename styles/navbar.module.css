@@ -1,0 +1,14 @@
+.linkWrapper {
+  @apply relative block py-5;
+}
+
+.links:after {
+  @apply bg-green content-[""] absolute bottom-0 left-0  w-full h-[3px];
+
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.links:hover:after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
